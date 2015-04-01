@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
 
+@property (nonatomic, strong) AVCaptureSession *captureSession;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property (nonatomic, weak) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *scanButton;
+-(IBAction)clickButtonAction:(id)sender;
 @end
 
