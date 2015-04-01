@@ -20,16 +20,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.statusLabel.hidden = YES;
+    //Setting background color
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    //setting scan button border and cormer radius
     self.scanButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.scanButton.layer.borderWidth = 0.7;
     self.scanButton.layer.cornerRadius = 3;
     self.scanButton.clipsToBounds = YES;
+    
+    //setting status label border and corner radius
     self.statusLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.statusLabel.layer.borderWidth = 0.7;
     self.statusLabel.layer.cornerRadius = 2;
     self.statusLabel.clipsToBounds = YES;
-    
+    //setting preview view border and corner radius
     self.previewView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.previewView.layer.borderWidth = 0.5;
     self.previewView.layer.cornerRadius = 5;
@@ -81,8 +86,6 @@
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     
     [self.captureSession startRunning];
-    
-    
     return YES;
 }
 //Stop Reading Code
