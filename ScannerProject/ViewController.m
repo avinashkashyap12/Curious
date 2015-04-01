@@ -81,7 +81,6 @@
     
     self.videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
     [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-   // [self.videoPreviewLayer setFrame:self.previewView.bounds];
     self.videoPreviewLayer.frame = self.previewView.bounds;
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     
